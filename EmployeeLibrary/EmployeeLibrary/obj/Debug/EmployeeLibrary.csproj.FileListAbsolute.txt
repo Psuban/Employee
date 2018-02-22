@@ -1,0 +1,6 @@
+C:\Users\suban\OneDrive\Documents\CityUni-.NetCourse\EmployeeLibrary\EmployeeLibrary\bin\Debug\EmployeeLibrary.dll
+C:\Users\suban\OneDrive\Documents\CityUni-.NetCourse\EmployeeLibrary\EmployeeLibrary\bin\Debug\EmployeeLibrary.pdb
+C:\Users\suban\OneDrive\Documents\CityUni-.NetCourse\EmployeeLibrary\EmployeeLibrary\obj\Debug\EmployeeLibrary.csproj.CoreCompileInputs.cache
+C:\Users\suban\OneDrive\Documents\CityUni-.NetCourse\EmployeeLibrary\EmployeeLibrary\obj\Debug\EmployeeLibrary.dll
+C:\Users\suban\OneDrive\Documents\CityUni-.NetCourse\EmployeeLibrary\EmployeeLibrary\obj\Debug\EmployeeLibrary.pdb
+C:\Users\suban\OneDrive\Documents\CityUni-.NetCourse\EmployeeLibrary\EmployeeLibrary\obj\Debug\EmployeeLibrary.csprojResolveAssemblyReference.cache
