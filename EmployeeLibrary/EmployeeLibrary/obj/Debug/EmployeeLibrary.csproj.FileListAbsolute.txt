@@ -4,3 +4,9 @@ C:\Users\suban\OneDrive\Documents\CityUni-.NetCourse\EmployeeLibrary\EmployeeLib
 C:\Users\suban\OneDrive\Documents\CityUni-.NetCourse\EmployeeLibrary\EmployeeLibrary\obj\Debug\EmployeeLibrary.dll
 C:\Users\suban\OneDrive\Documents\CityUni-.NetCourse\EmployeeLibrary\EmployeeLibrary\obj\Debug\EmployeeLibrary.pdb
 C:\Users\suban\OneDrive\Documents\CityUni-.NetCourse\EmployeeLibrary\EmployeeLibrary\obj\Debug\EmployeeLibrary.csprojResolveAssemblyReference.cache
+C:\Users\suban\Documents\GitHub\Employee\EmployeeLibrary\EmployeeLibrary\bin\Debug\EmployeeLibrary.dll
+C:\Users\suban\Documents\GitHub\Employee\EmployeeLibrary\EmployeeLibrary\bin\Debug\EmployeeLibrary.pdb
+C:\Users\suban\Documents\GitHub\Employee\EmployeeLibrary\EmployeeLibrary\obj\Debug\EmployeeLibrary.csprojResolveAssemblyReference.cache
+C:\Users\suban\Documents\GitHub\Employee\EmployeeLibrary\EmployeeLibrary\obj\Debug\EmployeeLibrary.csproj.CoreCompileInputs.cache
+C:\Users\suban\Documents\GitHub\Employee\EmployeeLibrary\EmployeeLibrary\obj\Debug\EmployeeLibrary.dll
+C:\Users\suban\Documents\GitHub\Employee\EmployeeLibrary\EmployeeLibrary\obj\Debug\EmployeeLibrary.pdb

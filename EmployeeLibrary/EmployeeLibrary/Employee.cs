@@ -61,7 +61,7 @@ namespace EmployeeLibrary
             posts = new Posts();
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return "ID: " + employeeID + "\nName: " + employeeName + "\nAddress: " + employeeAddress + "\nSalary: " + employeeSalary + "\nWeekly Pay: " + Convert.ToString(CalcWeeklyPay());
         }

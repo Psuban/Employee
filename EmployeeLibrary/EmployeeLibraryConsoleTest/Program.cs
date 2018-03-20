@@ -24,7 +24,7 @@ namespace EmployeeLibraryConsoleTest
                     "\n3. Remove an employee" +
                     "\n4. Remove post" +
                     "\n5. Display an individual employee and their Post collection" +
-                    "\n6. display all the employees in the collection (display of Posts optional)" +
+                    "\n6. Display all the employees in the collection (display of Posts optional)" +
                     "\n20. Exit\n");
                 userDecision = Convert.ToInt32(Console.ReadLine());
                 PrintConsoleSeparator(separators);
@@ -88,7 +88,8 @@ namespace EmployeeLibraryConsoleTest
         }
 
         static void RemoveEmployee()
-        { string eID;
+        {
+            string eID;
             Console.WriteLine("PLease enter the ID of the employee that you'd like to remove");
             eID = Console.ReadLine();
             employees.Remove(eID);
@@ -167,12 +168,11 @@ namespace EmployeeLibraryConsoleTest
             {
                 for (int i = 1; i <= employees.Count; i++)
                 {
-                    Console.Write(i + ") ");
-                    employee.ToString();
-                    Console.WriteLine();
-                    foreach (Posts posts in employee.Posts)
+                    Console.Write((i) + ") Employee Details:");
+                    Console.WriteLine(employee.ToString());
+                    foreach (Post post in employee.Posts)
                     {
-                        posts.ToString();
+                        Console.WriteLine("Post Details:\n" + post.ToString());
                     }
                 }
             }
@@ -181,19 +181,9 @@ namespace EmployeeLibraryConsoleTest
         static void Save()
         {
             FileOps.SaveBusiness("e.bin", employees);
-            Console.WriteLine("Business saved; press any ket to continue.");
+            Console.WriteLine("Business saved; press any key to continue.");
             Console.ReadLine();
         }
-
-
-        //static void Option4()
-        //{
-        //    Console.WriteLine(e.Post.ToString());
-        //}
-        //static void Option5()
-        //{
-        //    Console.WriteLine(e.ToString());
-        //}
 
         static void PrintConsoleSeparator(int separators)
         {

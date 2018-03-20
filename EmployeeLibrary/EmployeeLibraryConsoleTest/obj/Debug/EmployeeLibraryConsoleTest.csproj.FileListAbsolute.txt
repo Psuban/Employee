@@ -7,3 +7,12 @@ C:\Users\suban\OneDrive\Documents\CityUni-.NetCourse\EmployeeLibrary\EmployeeLib
 C:\Users\suban\OneDrive\Documents\CityUni-.NetCourse\EmployeeLibrary\EmployeeLibraryConsoleTest\obj\Debug\EmployeeLibraryConsoleTest.csproj.CoreCompileInputs.cache
 C:\Users\suban\OneDrive\Documents\CityUni-.NetCourse\EmployeeLibrary\EmployeeLibraryConsoleTest\obj\Debug\EmployeeLibraryConsoleTest.exe
 C:\Users\suban\OneDrive\Documents\CityUni-.NetCourse\EmployeeLibrary\EmployeeLibraryConsoleTest\obj\Debug\EmployeeLibraryConsoleTest.pdb
+C:\Users\suban\Documents\GitHub\Employee\EmployeeLibrary\EmployeeLibraryConsoleTest\bin\Debug\EmployeeLibraryConsoleTest.exe.config
+C:\Users\suban\Documents\GitHub\Employee\EmployeeLibrary\EmployeeLibraryConsoleTest\bin\Debug\EmployeeLibraryConsoleTest.exe
+C:\Users\suban\Documents\GitHub\Employee\EmployeeLibrary\EmployeeLibraryConsoleTest\bin\Debug\EmployeeLibraryConsoleTest.pdb
+C:\Users\suban\Documents\GitHub\Employee\EmployeeLibrary\EmployeeLibraryConsoleTest\bin\Debug\EmployeeLibrary.dll
+C:\Users\suban\Documents\GitHub\Employee\EmployeeLibrary\EmployeeLibraryConsoleTest\bin\Debug\EmployeeLibrary.pdb
+C:\Users\suban\Documents\GitHub\Employee\EmployeeLibrary\EmployeeLibraryConsoleTest\obj\Debug\EmployeeLibraryConsoleTest.csprojResolveAssemblyReference.cache
+C:\Users\suban\Documents\GitHub\Employee\EmployeeLibrary\EmployeeLibraryConsoleTest\obj\Debug\EmployeeLibraryConsoleTest.csproj.CoreCompileInputs.cache
+C:\Users\suban\Documents\GitHub\Employee\EmployeeLibrary\EmployeeLibraryConsoleTest\obj\Debug\EmployeeLibraryConsoleTest.exe
+C:\Users\suban\Documents\GitHub\Employee\EmployeeLibrary\EmployeeLibraryConsoleTest\obj\Debug\EmployeeLibraryConsoleTest.pdb
