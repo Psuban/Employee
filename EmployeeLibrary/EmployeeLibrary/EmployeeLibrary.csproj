@@ -43,9 +43,13 @@
     <Compile Include="Employee.cs" />
     <Compile Include="Employees.cs" />
     <Compile Include="FileOps.cs" />
+    <Compile Include="HourlyPaidEmployee.cs" />
+    <Compile Include="MonthlyPaidEmployee.cs" />
     <Compile Include="Post.cs" />
     <Compile Include="Posts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemporaryHourlyPaidEmployee.cs" />
+    <Compile Include="WeeklyPaidEmployee.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

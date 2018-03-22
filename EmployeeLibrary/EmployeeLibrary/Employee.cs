@@ -13,7 +13,6 @@ namespace EmployeeLibrary
         string employeeName;
         string employeeAddress;
         double employeeSalary;
-        Posts posts;
 
         public string ID
         {
@@ -30,21 +29,10 @@ namespace EmployeeLibrary
             get { return employeeAddress; }
             set { employeeAddress = value; }
         }
-        public double Salary
-        {
-            get { return employeeSalary; }
-            set {employeeSalary = value; }
-        }
-
-        public Posts Posts
-        {
-            get { return posts; }
-            set { posts = value; }
-        }
 
         public double CalcWeeklyPay()
         {
-            return Salary / 52;
+            return 0;
         }
 
         public Employee(string id, string name, string address, double salary)
@@ -53,17 +41,15 @@ namespace EmployeeLibrary
             employeeName = name;
             employeeAddress = address;
             employeeSalary = salary;
-            posts = new Posts();
         }
 
         public Employee()
         {
-            posts = new Posts();
         }
 
         public override string ToString()
         {
-            return "ID: " + employeeID + "\nName: " + employeeName + "\nAddress: " + employeeAddress + "\nSalary: " + employeeSalary + "\nWeekly Pay: " + Convert.ToString(CalcWeeklyPay());
+            return "ID: " + employeeID + "\nName: " + employeeName + "\nAddress: " + employeeAddress + "\nWeekly Pay: " + Convert.ToString(CalcWeeklyPay());
         }
 
         ~Employee()
