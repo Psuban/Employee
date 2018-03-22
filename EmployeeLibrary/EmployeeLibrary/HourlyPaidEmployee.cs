@@ -23,7 +23,6 @@ namespace EmployeeLibrary
             HourlyPaidEmployeeRate = hourlyPaidRate;
             HourlyPaidEmployeeHours = hourlyPaidHours;
         }
-
         public override string ToString()
         {
             return base.ToString() + "\nHourly Rate: " + Math.Round(HourlyPaidEmployeeRate, 2) + "\nHours worked: " + HourlyPaidEmployeeHours;

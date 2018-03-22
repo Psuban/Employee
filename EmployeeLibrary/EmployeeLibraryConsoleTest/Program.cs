@@ -71,20 +71,66 @@ namespace EmployeeLibraryConsoleTest
             string id;
             string name;
             string address;
-            double salary;
             Console.Write("ID: ");
             id = Console.ReadLine();
             Console.Write("Name: ");
             name = Console.ReadLine();
             Console.Write("Address: ");
             address = Console.ReadLine();
-            Console.Write("Salary: ");
-            salary = Convert.ToDouble(Console.ReadLine());
-            Employee e1 = new Employee(id, name, address, salary);
-            employees.Add(id, e1);
-            Console.WriteLine(e1.ToString());
-            Console.Write("Employee entered; press any key to continue.");
-            Console.ReadLine();
+            Console.WriteLine("Choose which type of employee you would like to add" +
+                "\n1) Monthly Paid Employee" +
+                "\n2) Weekly Paid Employee" +
+                "\n3) Hourly Paid Employee" +
+                "\n4) Temp Paid Employee");
+            string userEmpAddDecision = Console.ReadLine();
+            if (userEmpAddDecision == "1")
+            {
+                double annualSalary;
+                Console.Write("Salary: ");
+                annualSalary = Convert.ToDouble(Console.ReadLine());
+                MonthlyPaidEmployee monthlyPaidEmployee = new MonthlyPaidEmployee(id, name, address, annualSalary);
+                employees.Add(id, monthlyPaidEmployee);
+                Console.WriteLine("Monthly employee has been entered successfully. \nEmployee details added:\n" + monthlyPaidEmployee.ToString());
+            }
+            else if (userEmpAddDecision == "2")
+            {
+                double weeklyWage;
+                Console.Write("Salary: ");
+                weeklyWage = Convert.ToDouble(Console.ReadLine());
+                WeeklyPaidEmployee weeklyPaidEmployee = new WeeklyPaidEmployee(id, name, address, weeklyWage);
+                employees.Add(id, weeklyPaidEmployee);
+                Console.WriteLine("Weekly employee has been entered successfully. \n Employee details added:\n" + weeklyPaidEmployee.ToString());
+            }
+            else if (userEmpAddDecision == "3")
+            {
+                double hourlyRate;
+                int hourlyHours;
+                Console.Write("Hourly Rate: ");
+                hourlyRate = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Hours Worked: ");
+                hourlyHours = Convert.ToInt32(Console.ReadLine());
+                HourlyPaidEmployee hourlyPaidEmployee = new HourlyPaidEmployee(id, name, address, hourlyRate, hourlyHours);
+                employees.Add(id, hourlyPaidEmployee);
+                Console.WriteLine("Hourly employee has been entered successfully. \n Employee details added:\n" + hourlyPaidEmployee.ToString());
+            }
+            else if (userEmpAddDecision == "4")
+            {
+                DateTime tempStart;
+                DateTime tempEnd;
+                double hourlyRate;
+                int hourlyHours;
+                Console.Write("Start Date and Time Format(YYY-MM-DDTHH:MM:SS");
+                tempStart = Convert.ToDateTime(Console.ReadLine());
+                Console.Write("End Date and Time Format(YYY-MM-DDTHH:MM:SS");
+                tempEnd = Convert.ToDateTime(Console.ReadLine());
+                Console.Write("Hourly Rate: ");
+                hourlyRate = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Hours Worked: ");
+                hourlyHours = Convert.ToInt32(Console.ReadLine());
+                TemporaryHourlyPaidEmployee temporaryHourlyPaidEmployee = new TemporaryHourlyPaidEmployee(id, name, address, tempStart, tempEnd, hourlyRate, hourlyHours);
+                employees.Add(id, temporaryHourlyPaidEmployee);
+                Console.WriteLine("Temporaryemployee has been entered successfully. \n Employee details added:\n" + temporaryHourlyPaidEmployee.ToString());
+            }
         }
 
         static void RemoveEmployee()
