@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace EmployeeLibrary
 {
     [Serializable]
-    class MonthlyPaidEmployee:Employee
+    public sealed class MonthlyPaidEmployee:Employee
     {
         double monthlyPaidEmployeeAnnualSalary;
         Posts monthlyPaidEmployeePostHistory;
@@ -24,8 +24,15 @@ namespace EmployeeLibrary
             set { monthlyPaidEmployeePostHistory = value; }
         }
 
+        public MonthlyPaidEmployee(string id, string name, string address, double annualSalary )
+            :base(id,name,address)
+        {
+            monthlyPaidEmployeeAnnualSalary = annualSalary;
+            monthlyPaidEmployeePostHistory = new Posts();
+        }
+
         public double CalcSalaryAverage()
-        { 
+        {
             double totalSalary = 0;
             int numberOfSalaries = monthlyPaidEmployeePostHistory.Count;
 
@@ -39,7 +46,7 @@ namespace EmployeeLibrary
 
         public override double CalcWeeklyPay()
         {
-            return monthlyPaidEmployeeAnnualSalary / 2;
+            return monthlyPaidEmployeeAnnualSalary / 52;
         }
 
         public override string ToString()

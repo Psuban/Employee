@@ -12,7 +12,6 @@ namespace EmployeeLibrary
         string employeeID;
         string employeeName;
         string employeeAddress;
-        double employeeSalary;
 
         public string ID
         {
@@ -35,12 +34,11 @@ namespace EmployeeLibrary
             return 0;
         }
 
-        public Employee(string id, string name, string address, double salary)
+        public Employee(string id, string name, string address)
         {
             employeeID = id;
             employeeName = name;
             employeeAddress = address;
-            employeeSalary = salary;
         }
 
         public Employee()

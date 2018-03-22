@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace EmployeeLibrary
 {
     [Serializable]
-    class WeeklyPaidEmployee:Employee
+    public sealed class WeeklyPaidEmployee:Employee
     {
         public double WeeklyPaidEmployeeWeeklyWages { get; set; }
 
@@ -22,6 +22,13 @@ namespace EmployeeLibrary
                         totalSalary += post.Salary;
                     }
             return totalSalary / numberOfPosts;
+        }
+
+        public WeeklyPaidEmployee(string id, string name, string address, double weeklyWage)
+            :base(id,name,address)
+        {
+            WeeklyPaidEmployeeWeeklyWages = weeklyWage;
+            WeeklyPaidEmployeePostHistory = new Posts();
         }
 
         public override double CalcWeeklyPay()
