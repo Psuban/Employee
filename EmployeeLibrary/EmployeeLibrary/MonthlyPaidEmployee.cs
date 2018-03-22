@@ -25,16 +25,26 @@ namespace EmployeeLibrary
         }
 
         public double CalcSalaryAverage()
-        {
-            double averageSalary=0;
-                foreach (Post post in monthlyPaidEmployeePostHistory)
+        { 
+            double totalSalary = 0;
+            int numberOfSalaries = monthlyPaidEmployeePostHistory.Count;
+
+            foreach (Post post in monthlyPaidEmployeePostHistory)
                 {
-                    double totalSalary = 0;
-                    int numberOfSalaries = monthlyPaidEmployeePostHistory.Count;
                     totalSalary = totalSalary + post.Salary;
-                    averageSalary = totalSalary / numberOfSalaries;
                 }
-           return averageSalary;
+
+            return totalSalary / numberOfSalaries;
+        }
+
+        public override double CalcWeeklyPay()
+        {
+            return monthlyPaidEmployeeAnnualSalary / 2;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + "\nAnnual Salary: " + monthlyPaidEmployeeAnnualSalary;
         }
     }
 }

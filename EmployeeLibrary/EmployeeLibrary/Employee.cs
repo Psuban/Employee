@@ -30,7 +30,7 @@ namespace EmployeeLibrary
             set { employeeAddress = value; }
         }
 
-        public double CalcWeeklyPay()
+        public virtual double CalcWeeklyPay()
         {
             return 0;
         }

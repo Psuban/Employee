@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace EmployeeLibrary
 {
     [Serializable]
-    class TemporaryHourlyPaidEmployee
+    class TemporaryHourlyPaidEmployee :Employee
     {
     }
 }
