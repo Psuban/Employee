@@ -13,6 +13,13 @@ namespace EmployeeLibrary
 
         public Posts WeeklyPaidEmployeePostHistory { get; set; }
 
+        public WeeklyPaidEmployee(string id, string name, string address, double weeklyWage)
+         : base(id, name, address)
+        {
+            WeeklyPaidEmployeeWeeklyWages = weeklyWage;
+            WeeklyPaidEmployeePostHistory = new Posts();
+        }
+
         public double CalcSalaryAverage()
         {
             double totalSalary = 0;
@@ -22,13 +29,6 @@ namespace EmployeeLibrary
                         totalSalary += post.Salary;
                     }
             return totalSalary / numberOfPosts;
-        }
-
-        public WeeklyPaidEmployee(string id, string name, string address, double weeklyWage)
-            :base(id,name,address)
-        {
-            WeeklyPaidEmployeeWeeklyWages = weeklyWage;
-            WeeklyPaidEmployeePostHistory = new Posts();
         }
 
         public override double CalcWeeklyPay()

@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,35 +15,11 @@ namespace EmployeeLibrary
         DateTime postEndDate;
         double postSalary;
 
-        public string ID
-        {
-            get { return postID; }
-            set { postID = value; }
-        }
-
-        public string Name
-        {
-            get { return postName; }
-            set { postName = value; }
-        }
-        public DateTime StartDate
-        {
-            get { return postStartDate; }
-            set { postStartDate = value; }
-        }
-
-        public DateTime EndDate
-        {
-            get { return postEndDate; }
-            set { postEndDate = value; }
-        }
-
-        public double Salary
-        {
-            get { return postSalary; }
-            set { postSalary = value; }
-        }
-
+        public string ID { get; set; }
+        public string Name { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public double Salary { get; set; }
         public Post (string id, string name, DateTime startDate, DateTime endDate, double salary)
         {
             postID = id;
@@ -58,7 +34,7 @@ namespace EmployeeLibrary
 
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return "\nID:" + postID + "\nName: " + postName + "\nStart Date: " + Convert.ToString(postStartDate) + "\nEnd Date: " + Convert.ToString(postEndDate) + "\nSalary: " + postSalary;
         }

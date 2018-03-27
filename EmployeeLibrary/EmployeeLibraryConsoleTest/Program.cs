@@ -169,7 +169,7 @@ namespace EmployeeLibraryConsoleTest
 
             employees[eid].Posts.Add(pid, post);
 
-            Console.WriteLine("Post entered; press any key to continue");
+            Console.WriteLine("Post entered successfully; Post entered for Employee id: " + eid + "\nPost Details: " + employees[eid].Posts[pid].ToString());
             Console.ReadLine();
         }
 
@@ -182,7 +182,7 @@ namespace EmployeeLibraryConsoleTest
             Console.Write("Post ID: ");
             pid = Console.ReadLine();
             employees[eid].Posts.Remove(pid);
-            Console.WriteLine("Post has been removed for employee id: {0}",eid);
+            Console.WriteLine("Post id: {0} has been successfully removed for Employee id: {1}",pid,eid);
             Console.ReadLine();
         }
 
@@ -195,16 +195,28 @@ namespace EmployeeLibraryConsoleTest
         static void Display()
         {
             string eid;
-            string pid;
             Console.Write("Employee ID: ");
             eid = Console.ReadLine();
-            Console.Write("Post ID: ");
-            pid = Console.ReadLine();
-            Console.WriteLine("Employee Details for id {0}: " + employees[eid].ToString() + "\n Employee with {0} Post details for id {1}: " + employees[eid].Posts[pid].ToString(),eid,pid);
+            Console.WriteLine("Employee Details for id {0}: " + employees[eid].ToString());
 
-            foreach (Posts post in employees[eid].Posts)
+            if (employees[eid] is MonthlyPaidEmployee)
             {
-                post.ToString();
+                MonthlyPaidEmployee monthly = (MonthlyPaidEmployee)employees[eid];
+                Console.WriteLine("The average annual salary from previous posts is: " + monthly.CalcSalaryAverage());
+            }
+            else if (employees[eid] is WeeklyPaidEmployee)
+            {
+                WeeklyPaidEmployee weeklyPaidEmployee = (WeeklyPaidEmployee)employees[eid];
+                Console.WriteLine("The average weekly salary from previous posts is: " + weeklyPaidEmployee.CalcSalaryAverage());
+            }
+
+            Console.WriteLine("\nBelow is a list of posts for this employee:");
+            foreach(Post post in employees[eid].Posts)
+            {
+                int i = 1;
+                Console.WriteLine(i + ")");
+                Console.Write(post.ToString() +"\n");
+                i++;
             }
         }
 

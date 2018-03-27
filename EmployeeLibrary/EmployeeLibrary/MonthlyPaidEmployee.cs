@@ -9,36 +9,25 @@ namespace EmployeeLibrary
     [Serializable]
     public sealed class MonthlyPaidEmployee:Employee
     {
-        double monthlyPaidEmployeeAnnualSalary;
-        Posts monthlyPaidEmployeePostHistory;
+        public double MonthlyPaidEmployeeAnnualSalary { get; set; }
 
-        public double MonthlyPaidEmployeeAnnualSalary
-        {
-            get { return monthlyPaidEmployeeAnnualSalary;  }
-            set { monthlyPaidEmployeeAnnualSalary = value; }
-        }
-
-        public Posts MonthlyPaidEmployeePostHistory
-        {
-            get { return monthlyPaidEmployeePostHistory; }
-            set { monthlyPaidEmployeePostHistory = value; }
-        }
+        public Posts MonthlyPaidEmployeePostHistory { get; set; }
 
         public MonthlyPaidEmployee(string id, string name, string address, double annualSalary )
             :base(id,name,address)
         {
-            monthlyPaidEmployeeAnnualSalary = annualSalary;
-            monthlyPaidEmployeePostHistory = new Posts();
+            MonthlyPaidEmployeeAnnualSalary = annualSalary;
+            MonthlyPaidEmployeePostHistory = new Posts();
         }
 
         public double CalcSalaryAverage()
         {
             double totalSalary = 0;
-            int numberOfSalaries = monthlyPaidEmployeePostHistory.Count;
+            int numberOfSalaries = MonthlyPaidEmployeePostHistory.Count;
 
-            foreach (Post post in monthlyPaidEmployeePostHistory)
+            foreach (Post post in MonthlyPaidEmployeePostHistory)
                 {
-                    totalSalary = totalSalary + post.Salary;
+                    totalSalary += post.Salary;
                 }
 
             return totalSalary / numberOfSalaries;
@@ -46,12 +35,12 @@ namespace EmployeeLibrary
 
         public override double CalcWeeklyPay()
         {
-            return monthlyPaidEmployeeAnnualSalary / 52;
+            return MonthlyPaidEmployeeAnnualSalary / 52;
         }
 
         public override string ToString()
         {
-            return base.ToString() + "\nAnnual Salary: " + monthlyPaidEmployeeAnnualSalary;
+            return base.ToString() + "\nAnnual Salary: " + MonthlyPaidEmployeeAnnualSalary;
         }
     }
 }

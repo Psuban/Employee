@@ -12,6 +12,7 @@ namespace EmployeeLibrary
         string employeeID;
         string employeeName;
         string employeeAddress;
+        public Posts Posts{ get; set; }
 
         public string ID
         {
@@ -39,10 +40,12 @@ namespace EmployeeLibrary
             employeeID = id;
             employeeName = name;
             employeeAddress = address;
+            Posts = new Posts();
         }
 
         public Employee()
         {
+            Posts = new Posts();
         }
 
         public override string ToString()

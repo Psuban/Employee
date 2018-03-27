@@ -12,7 +12,7 @@ namespace EmployeeLibrary
         public double HourlyPaidEmployeeRate { get; set; }
         public int HourlyPaidEmployeeHours { get; set; }
 
-        public override double CalcWeeklyPay()
+        public override double CalcWeeklyPay() //not necessarily a complete week
         {
             return HourlyPaidEmployeeHours * HourlyPaidEmployeeRate;
         }
